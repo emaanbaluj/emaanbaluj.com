@@ -1,0 +1,299 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #FFFFFF;
+    background-color: #000000;
+    overflow: auto; /* Allow scrolling */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+button {
+    background-color: #000000;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #FFFFFF;
+    color: #000000;
+    border-color: #000000;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.top-half {
+    background-color: rgb(255, 255, 255);
+    height: 100vh; /* Take up 100% of the viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.bottom-half {
+    background-color: black;
+    min-height: 100vh; /* Ensure it takes at least 100% of the viewport height */
+    padding: 20px;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.message {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 50px;
+    color: #000000;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.highlight {
+    color: #0029FF; /* Default color */
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+.cs-soton {
+    font-family: 'Hiragino Kaku Gothic Std W8', sans-serif;
+    font-size: 32px;
+    color: #000000;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.highlight2 {
+    color: #066088;
+}
+
+.icons {
+    margin-top: 20px;
+    display: flex;
+    gap: 50px; /* Increase the gap between icons */
+    color: #000000;
+}
+
+.icons i {
+    font-size: 40px;
+    color: #000000;
+    transition: color 0.3s ease, transform 03s ease;
+}
+
+.icons i:hover {
+transform: scale(1.2);
+}
+
+.icons .bi-linkedin:hover {
+color: #0077b5; /* LinkedIn blue */
+}
+
+.icons .bi-github:hover {
+color: #171515; /* GitHub black */
+}
+
+.icons .bi-instagram:hover {
+color: #e4405f; /* Instagram gradient */
+}
+
+.icons .bi-twitter:hover {
+color: #1da1f2; /* Twitter blue */
+}
+
+.icons .bi-spotify:hover {
+color: #1DB954; /* Spotify green */
+}
+
+.about-section {
+    padding: 20px;
+    padding-top: 0;
+    padding-left: 50px;
+    margin-bottom: 0px; /* Reduce the bottom margin to 0 */
+}
+
+.about-title {
+font-size: 48px;
+font-weight: 700;
+color: #FFFFFF;
+margin-bottom: 20px;
+}
+
+.about-description {
+font-family: ‘Helvetica’, sans-serif;
+font-size: 25px;
+font-weight: 400;
+color: #ffffff;
+margin-bottom: 5px; /* Reduce the bottom margin */
+}
+
+.project-section {
+    padding: 20px;
+    padding-left: 50px;
+    padding-top: -19; /* Reduce the top padding to 0 */
+    margin-top: 0px; /* Reduce the top margin to 0 */
+}
+
+.project-title {
+font-size: 48px;
+font-weight: 700;
+color: #FFFFFF;
+margin-top: 40px; /* Reduce the top margin /
+margin-bottom: 40px; / Adjusted margin for more space between title and boxes */
+}
+
+.project-box {
+background-color: #FFFFFF;
+border-radius: 15px;
+padding: 20px;
+margin-bottom: 80px;  
+max-width: 1000px;
+margin-left: auto;
+margin-right: auto;
+transition: all 0.3s ease-in-out; 
+}
+
+.project-box:hover {
+transform: scale(1.05); /* Slightly enlarge the box /
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); / Add shadow effect */
+}
+
+.project-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 15px;
+}
+
+.project {
+margin-bottom: 30px;
+}
+
+.project-name {
+font-size: 30px;
+font-weight: 700;
+color: #000000;
+}
+
+.project-description {
+font-size: 25px;
+font-weight: 400;
+color: #000000;
+}
+
+.project-icons {
+display: flex;
+gap: 15px;
+}
+
+.project-icons img {
+width: 40px;
+height: 40px;
+}
+
+.contact-half {
+color: #ffffff;
+}
+
+/* Contact Section */
+.contact-section {
+padding: 40px;
+background-color: #ffffff;
+text-align: left;
+max-width: 10000px;
+margin: 0 auto;
+border-radius: 10px;
+margin-bottom: 120px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contact-title {
+font-size: 48px;
+font-weight: 700;
+color: #000000;
+margin-bottom: 10px;
+}
+
+.contact-subtitle {
+font-size: 24px;
+font-weight: 400;
+color: #000000;
+margin-bottom: 10px;
+}
+
+.contact-description {
+font-size: 18px;
+font-weight: 400;
+color: #000000;
+margin-bottom: 10px;
+}
+
+.contact-email {
+font-size: 18px;
+font-weight: 400;
+color: #000000;
+margin-bottom: 20px;
+}
+
+.contact-email a {
+color: #000000;
+text-decoration: none;
+}
+
+.contact-email a:hover {
+text-decoration: underline;
+}
+
+.contact-form {
+display: flex;
+flex-direction: column;
+}
+
+.contact-input {
+padding: 10px;
+margin-bottom: 10px;
+font-size: 16px;
+border: 1px solid #cccccc;
+border-radius: 5px;
+color: #000000;
+background-color: #ffffff;
+}
+
+.contact-button {
+padding: 10px 20px;
+font-size: 18px;
+font-weight: 700;
+color: #ffffff;
+background-color: #000000;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+background-color: #444444;
+}

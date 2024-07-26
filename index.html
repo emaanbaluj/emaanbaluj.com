@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emaan Baluj</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.9.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<body>
+    <div class="container">
+        <div class="top-half">
+            <div class="message">hi, I'm <span class="highlight">Emaan</span></div>
+            <div class="cs-soton">Computer Science @ <span class="highlight2">University of Southampton</span></div>
+            <div class="icons">
+                <a href="https://www.linkedin.com/in/emaanbaluj/" target="_blank">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+                <a href="https://github.com/emaanbaluj" target="_blank">
+                    <i class="bi bi-github"></i>
+                </a>
+                <a href="https://www.instagram.com/livemvn/?next=%2F" target="_blank">
+                    <i class="bi bi-instagram"></i>
+                </a>
+                <a href="https://x.com/livemvn" target="_blank">
+                    <i class="bi bi-twitter"></i>
+                </a>
+                <a href="https://open.spotify.com/user/31pgmm4sbwuqip65xbnsnfdhdkxu" target="_blank">
+                    <i class="bi bi-spotify"></i>
+                </a>
+            </div>
+        </div>
+        <div class="bottom-half">
+            <div class="about-section fade-in" data-aos="fade-up">
+                <h1 class="about-title">About</h1>
+                <p class="about-description">I’m a 2nd Year Computer Science with Artificial Intelligence student at <span class="highlight3">University of Southampton</span>. My passion for creating functional and visually appealing projects and applications has inspired me to pursue a career in the technology space, with main interests include: computer vision, machine learning, cloud computing and software engineering.</p>
+                <p class="about-description">Currently I am a Software Engineering Fellow at <span class="highlight4">Headstarter AI</span>, where I build 5+ AI based projects within 5 weeks, participate in 5 hackathons and receive advice from real software engineers on interview preparation, resume reviews and information regarding engineering opportunities.</p>
+            </div>
+            <div class="project-section fade-in" data-aos="fade-up">
+                <h1 class="project-title">Projects</h1>
+                
+                <div class="project-box">
+                    <div class="project-header">
+                        <h2 class="project-name">StudoPal</h2>
+                        <div class="project-icons">
+                            <img src="icons/python.png" alt="Python" class="icon">
+                            <img src="icons/django.png" alt="Django" class="icon">
+                            <img src="icons/qt.png" alt="Qt" class="icon">
+                            <img src="icons/postgresql.png" alt="PostgreSQL" class="icon">
+                        </div>
+                    </div>
+                    <p class="project-description">An all-in-one study gadget featuring a Pomodoro timer, a to-do list, and a large language model. This versatile device is designed to enhance productivity and streamline your study sessions, all built into one system-tray application.</p>
+                </div>
+
+                <!-- Add another project box -->
+                <div class="project-box">
+                    <div class="project-header">
+                        <h2 class="project-name">University of Southampton ISOC App</h2>
+                        <div class="project-icons">
+                            <img src="icons/python.png" alt="Python" class="icon">
+                            <img src="icons/flutter.png" alt="Flutter" class="icon">
+                            <img src="icons/flask.png" alt="Flask" class="icon">
+                            <img src="icons/postgresql.png" alt="PostgreSQL" class="icon">
+                        </div>
+                    </div>
+                    <p class="project-description">Developed a cross-platform mobile application for the University of Southampton Islamic Society. The app features real-time updates on prayer times and upcoming society events, ensuring users can accurately observe their daily prayers and keep up to date with society activities.</p>
+                </div>
+                <!-- Add more projects as needed -->
+            </div>
+            <div class="contact-half">
+                <div class="contact-section fade-in" data-aos="fade-up">
+                    <h1 class="contact-title">Contact Me</h1>
+                    <div class="contact-content">
+                        <div class="contact-info">
+                            <p class="contact-subtitle">Get in touch</p>
+                            <p class="contact-description">Have any questions? Drop me an email to find out more</p>
+                            <p class="contact-email">Email: <a href="mailto:emaanbaluj@icloud.com">emaanbaluj@icloud.com</a></p>
+                        </div>
+                        <form class="contact-form">
+                            <input type="text" class="contact-input" placeholder="Full Name" required>
+                            <input type="email" class="contact-input" placeholder="Your Email" required>
+                            <textarea class="contact-input" placeholder="Message" rows="5" required></textarea>
+                            <button type="submit" class="contact-button">SEND</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const faders = document.querySelectorAll('.fade-in');
+
+            const appearOptions = {
+                threshold: 0,
+                rootMargin: "0px 0px -50px 0px"
+            };
+
+            const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) {
+                        return;
+                    } else {
+                        entry.target.classList.add('visible');
+                        appearOnScroll.unobserve(entry.target);
+                    }
+                });
+            }, appearOptions);
+
+            faders.forEach(fader => {
+                appearOnScroll.observe(fader);
+            });
+        });
+    </script>
+</body>
+</html>
